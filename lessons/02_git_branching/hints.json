@@ -1,0 +1,17 @@
+[
+  {
+    "level": 1,
+    "title": "Как создать ветку и переключиться на неё?",
+    "content": "В современном Git достаточно одной команды:\n  git switch -c new\n(или классический вариант: git checkout -b new).\nЧтобы вернуться назад в main: git switch main (или git checkout main)."
+  },
+  {
+    "level": 2,
+    "title": "Как искусственно вызвать конфликт слияния?",
+    "content": "1. В ветке 'new' измените строку 1 файла file.txt: 'Ветка NEW' и закоммитьте.\n2. Перейдите в 'main': git switch main.\n3. В ветке 'main' в той же строке 1 файла file.txt напишите: 'Ветка MAIN' и закоммитьте.\n4. Выполните: git merge new. Git напишет: CONFLICT (content): Merge conflict in file.txt!"
+  },
+  {
+    "level": 3,
+    "title": "Как разрешить конфликт слияния?",
+    "content": "1. Откройте файл с конфликтом в редакторе (VS Code / PyCharm).\n2. Удалите служебные стрелки <<<<<<< HEAD, ======= и >>>>>>> new.\n3. Оставьте нужный итоговый текст.\n4. Выполните: git add file.txt\n5. Выполните: git commit -m 'Resolve conflict'"
+  }
+]

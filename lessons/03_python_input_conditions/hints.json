@@ -1,0 +1,17 @@
+[
+  {
+    "level": 1,
+    "title": "Логика високосного года и проверка строк",
+    "content": "Для проверки года в Python используйте оператор остатка от деления %:\n  делится на 4: year % 4 == 0\n  не делится на 100: year % 100 != 0\n  делится на 400: year % 400 == 0\nСоедините их через and и or."
+  },
+  {
+    "level": 2,
+    "title": "Алгоритм формулы Герона и валидация",
+    "content": "Шаг 1: Проверьте стороны: a > 0 and b > 0 and c > 0\nШаг 2: Проверьте неравенство треугольника:\n  (a < b + c) and (b < a + c) and (c < a + b)\nЕсли не выполняется — raise ValueError('Треугольник не существует')\nШаг 3: Полупериметр p = (a + b + c) / 2\nШаг 4: Площадь S = math.sqrt(p * (p - a) * (p - b) * (p - c))"
+  },
+  {
+    "level": 3,
+    "title": "Эталонный код решения",
+    "content": "def is_leap_year(year: int) -> bool:\n    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\n\ndef validate_year_string(raw: str) -> bool:\n    return raw.isdigit() and len(raw) == 4 and (1000 <= int(raw) <= 9999)"
+  }
+]

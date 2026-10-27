@@ -1,0 +1,17 @@
+[
+  {
+    "level": 1,
+    "title": "Зачем нужны git add и git commit?",
+    "content": "Аналогия с посылкой:\n1. 'git add <файл>' — это положить файл в коробку (staging area / индекс).\n2. 'git commit -m \"описание\"' — запечатать коробку скотчем и отправить её в историю.\nБез git add файл не попадёт в коммит!"
+  },
+  {
+    "level": 2,
+    "title": "Последовательность команд практической работы",
+    "content": "Шаг 1: mkdir project && cd project\nШаг 2: git init\nШаг 3: echo '# Project' > README.md\nШаг 4: git add README.md && git commit -m 'Initial commit'\nШаг 5: echo 'Новая строка' >> README.md\nШаг 6: git diff > diff.txt\nШаг 7: git add README.md diff.txt && git commit -m 'Add diff'\nШаг 8: git log > log.txt\nШаг 9: git add log.txt && git commit -m 'Add log'"
+  },
+  {
+    "level": 3,
+    "title": "Полное эталонное решение и разбор",
+    "content": "Вывод команды 'git diff > diff.txt' перенаправляет поток вывода консоли в текстовый файл.\nСимвол '>' перезаписывает файл, а '>>' дописывает в конец.\nКоманда 'git log' показывает историю коммитов (автор, дата, хеш SHA-1 и сообщение).\nВ файле exercise_standard.py укажите абсолютный или относительный путь к созданной папке project."
+  }
+]

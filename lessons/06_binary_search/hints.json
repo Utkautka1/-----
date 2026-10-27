@@ -1,0 +1,17 @@
+[
+  {
+    "level": 1,
+    "title": "Инвариант границ и деление пополам",
+    "content": "Инициализируйте: left = a, right = b, steps = 0.\nВ цикле: while left <= right:\n  Вычислите mid = (left + right) // 2\n  steps += 1\n  Если mid == x: УРА, нашли!\n  Если mid < x: искомое правее, значит left = mid + 1\n  Если mid > x: искомое левее, значит right = mid - 1"
+  },
+  {
+    "level": 2,
+    "title": "Форматирование лога каждого шага",
+    "content": "Для каждого шага добавьте строку в список лога:\nif mid < x:\n    log.append(f'Шаг {steps}: left={left}, right={right}, mid={mid} -> {mid} < {x}, ищем правее')\nelif mid > x:\n    log.append(f'Шаг {steps}: left={left}, right={right}, mid={mid} -> {mid} > {x}, ищем левее')\nelse:\n    log.append(f'Шаг {steps}: left={left}, right={right}, mid={mid} -> число найдено!')"
+  },
+  {
+    "level": 3,
+    "title": "Теоретический максимум и краевые случаи",
+    "content": "Теоретический максимум вычисляется через: math.ceil(math.log2(b - a + 2)).\nВалидация в начале функции:\nif a > b:\n    raise ValueError('Нижняя граница a не может быть больше верхней b')\nif x < a or x > b:\n    raise ValueError(f'Число {x} не входит в диапазон [{a}; {b}]')"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "level": 1,
+    "title": "Метод двух указателей для разворота списка",
+    "content": "Поставьте два указателя: left = 0 (в начало) и right = len(numbers) - 1 (в конец).\nПока left < right:\n  Поменяйте местами: numbers[left], numbers[right] = numbers[right], numbers[left]\n  Сдвиньте указатели: left += 1; right -= 1"
+  },
+  {
+    "level": 2,
+    "title": "Удаление дубликатов с сохранением порядка",
+    "content": "Чтобы сохранить порядок за время O(n), используйте вспомогательное множество seen = set():\nresult = []\nfor item in numbers:\n    if item not in seen:\n        seen.add(item)\n        result.append(item)\nreturn result"
+  },
+  {
+    "level": 3,
+    "title": "Алгоритм слияния двух отсортированных списков",
+    "content": "Используйте два указателя i = 0, j = 0:\nПока i < len(a) and j < len(b):\n    if a[i] <= b[j]:\n        res.append(a[i]); i += 1\n    else:\n        res.append(b[j]); j += 1\nЗатем добавьте остатки: res.extend(a[i:]); res.extend(b[j:])"
+  }
+]
